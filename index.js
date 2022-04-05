@@ -124,7 +124,7 @@ export default () => {
         }
 
         if (localPlayer.hasAction('fly') ){
-            localPlayer.removeAction('fly');
+            //localPlayer.removeAction('fly'); not used for now
             // works but has stutter when pressed       
         }
                 
