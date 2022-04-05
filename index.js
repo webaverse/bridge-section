@@ -84,7 +84,7 @@ export default () => {
 
                const sound = new THREE.PositionalAudio( listener );
                const audioLoader = new THREE.AudioLoader();
-                audioLoader.load( 'scenes/bridge-game/audio/glass' + randomSfx.toString() + '.wav', function( buffer ) {
+                audioLoader.load( 'https://webaverse.github.io/bridge-section/audio/glass' + randomSfx.toString() + '.wav', function( buffer ) {
                       sound.setBuffer( buffer );
                       sound.setRefDistance( 10 );
                       sound.setVolume( 3 );
