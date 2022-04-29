@@ -1,3 +1,4 @@
 {
+  "description": "bridge-section",
   "start_url": "index.js"
 }
