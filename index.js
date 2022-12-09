@@ -113,7 +113,6 @@ export default () => {
         physics.removeGeometry(physicsId);
       }
     });
-
     useFrame(({ timeDiff, timestamp }) => {
 
       if(localPlayer.avatar) {
@@ -143,7 +142,7 @@ export default () => {
                 }
 
                 // Ensures falling and not being able to sprint/run to the next glass plate
-                physics.setCharacterControllerPosition(localPlayer.characterController, new THREE.Vector3(localPlayer.position.x, localPlayer.position.y - 1, localPlayer.position.z));
+                physics.setCharacterControllerPosition(localPlayer.characterPhysics.characterController, new THREE.Vector3(localPlayer.position.x, localPlayer.position.y - 1, localPlayer.position.z));
               }
             }
           }
@@ -153,7 +152,7 @@ export default () => {
 
       // Resets character position to spawn position
       if(localPlayer.position.y < -25) {
-        physics.setCharacterControllerPosition(localPlayer.characterController, defaultSpawn);
+        physics.setCharacterControllerPosition(localPlayer.characterPhysics.characterController, defaultSpawn);
       }
 
       
